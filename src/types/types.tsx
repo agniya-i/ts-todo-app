@@ -1,12 +1,29 @@
-export interface IAddress{
+export interface IAddress {
     street: string,
     city: string,
     zipcode: string
 }
 
-export interface IUser{
-    id: number, 
+export interface IUser {
+    id: number,
     name: string,
-    email: string, 
+    email: string,
     address: IAddress
 }
+
+export interface ITodo {
+    id: number;
+    title: string;
+    status: string;
+}
+
+export interface IColumn {
+    index: number;
+    title: string;
+    items: number[];
+}
+
+// type Actions =
+//     | { type: 'add', payload: string }
+//     | { type: 'edit', payload: number }
+//     | { type: 'remove', payload: number }

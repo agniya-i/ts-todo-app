@@ -1,6 +1,4 @@
-import React, {FC} from "react";
-import { useState } from "react";
-
+import {FC} from "react";
 
 export enum CardVariant{
     outlined = "outlined",
