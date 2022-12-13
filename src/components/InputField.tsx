@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-
+import React from 'react';
 
 interface Input {
     value: string,
@@ -8,7 +7,7 @@ interface Input {
 }
 
 const InputField: React.FC<Input> = ({ value, handleChange, handleSubmit }) => {
-    const inputRef = useRef<HTMLInputElement>();
+    // const inputRef = useRef<HTMLInputElement>();
 
     return (
         <form className='input'>

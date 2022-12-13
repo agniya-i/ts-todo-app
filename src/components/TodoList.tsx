@@ -56,9 +56,8 @@ const TodoList: React.FC<List> = ({ columns, todos, handleChange }) => {
             index={index}
         />)
     }
-    console.log('COLUMNS', columns);
-    return (
 
+    return (
         <div className="list">
             {columns.map(((column, index) =>
                 <Droppable droppableId={column.title} key={index}>
@@ -81,80 +80,6 @@ const TodoList: React.FC<List> = ({ columns, todos, handleChange }) => {
                     }
                 </Droppable>
             ))}
-            {/* <Droppable droppableId='TodosList'>
-                {
-                    (provided) =>
-                    (<div className='column'
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                    >
-                        <div className='column-header column-header--red'>To Do</div>
-                        <div className="todos">
-                            {
-                                todos.map((todo, index) =>
-                                    todo.status === 'to do' &&
-                                    <TodoItem
-                                        key={todo.id}
-                                        todo={todo}
-                                        handleDone={handleDone}
-                                        handleDelete={handleDelete}
-                                        handleEdit={handleEdit}
-                                        index={index}
-                                    />)
-                            }
-                        </div>
-                        {provided.placeholder}
-                    </div>
-
-                    )
-                }
-            </Droppable>
-            <Droppable droppableId='TodosRemove'>
-                {
-                    (provided) => (
-                        <div
-                            className='column romove'
-                            ref={provided.innerRef}
-                            {...provided.droppableProps}
-                        >
-
-                            <div className='column-header column-header--yellow'>In Progress</div>
-                            <div className="todos">
-                                {
-                                    completedTodos.map((todo, index) =>
-
-                                        <TodoItem
-                                            key={todo.id}
-                                            index={index}
-                                            todo={todo}
-                                            handleDone={handleDone}
-                                            handleDelete={handleDelete}
-                                            handleEdit={handleEdit}
-                                        />)
-                                }
-                            </div>
-                            {provided.placeholder}
-                        </div>
-                    )
-                }
-            </Droppable>
-            <div className='column'>
-                <div className='column-header column-header--green'>Done</div>
-                <div className="todos">
-                    {
-                        todos.map((todo, index) =>
-                            todo.status === 'done' &&
-                            <TodoItem
-                                index={index}
-                                key={todo.id}
-                                todo={todo}
-                                handleDone={handleDone}
-                                handleDelete={handleDelete}
-                                handleEdit={handleEdit}
-                            />)
-                    }
-                </div>
-            </div> */}
         </div>
 
     )
